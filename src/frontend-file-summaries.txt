@@ -1,0 +1,18 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with routes for Home, About, Services, and Contact pages, all wrapped in a shared Layout component.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component that composes the site header, main content area with Outlet for page content, and site footer.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive navigation header with logo, business name, desktop/mobile navigation links, and integrated authentication controls in both desktop header and mobile sheet menu.",
+  "frontend/src/components/SiteFooter.tsx": "Site footer displaying logo, business name, quick navigation links, social media icons, and copyright notice with caffeine.ai attribution; sources content from siteConfig.",
+  "frontend/src/components/ContactForm.tsx": "Contact form component with client-side validation for name, email, and message fields, loading states during submission, and success confirmation display.",
+  "frontend/src/pages/HomePage.tsx": "Home page with hero section featuring headline, subheadline, CTA buttons, hero banner image, feature highlights grid, and bottom CTA section; sources content from siteConfig.",
+  "frontend/src/pages/AboutPage.tsx": "About page displaying company story in a card and values grid with icons; sources content from siteConfig and uses proper heading hierarchy.",
+  "frontend/src/pages/ServicesPage.tsx": "Services page with hero section and grid of service cards showing title, description, and optional pricing; sources content from siteConfig.",
+  "frontend/src/pages/ContactPage.tsx": "Contact page with contact information cards (email, phone, address) and embedded contact form; sources content from siteConfig.",
+  "frontend/src/content/siteConfig.ts": "Centralized configuration file containing all business content including the updated business name \"Elevate Solutions Singh\", tagline, navigation, hero copy, highlights, about story, values, services, contact details, and social links.",
+  "frontend/src/hooks/usePageMeta.ts": "Custom hook to set document title and meta description dynamically for each page to support SEO.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file for React Query hooks to interact with backend (currently no backend methods exist).",
+  "frontend/src/index.css": "Global styles with warm earth-toned OKLCH color system for both light and dark modes, avoiding blue/purple dominance, with typography and base styling.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with Inter font family, OKLCH color tokens, custom border radius, enhanced box shadows, and animation keyframes.",
+  "frontend/index.html": "HTML entry point with updated title and meta description for SEO defaults.",
+  "frontend/src/components/AuthControls.tsx": "Reusable authentication control component that uses useInternetIdentity hook to render sign-in/sign-out buttons with loading states, error messages, and optional abbreviated principal display."
+}

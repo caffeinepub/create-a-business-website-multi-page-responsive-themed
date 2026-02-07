@@ -1,0 +1,42 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-add-a-login-logout-control-to-the-site-header-using-the-existing-internet-identity-provider-so-visitors-can-sign-in-and-sign-out-without-usernames-passwords",
+      "featureTitle": "Add a login/logout control to the site header using the existing Internet Identity provider so visitors can sign in and sign out without usernames/passwords.",
+      "files": [
+        "frontend/src/components/AuthControls.tsx",
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-ensure-the-mobile-navigation-experience-also-exposes-the-same-sign-in-sign-out-functionality-so-authentication-is-available-on-small-screens",
+      "featureTitle": "Ensure the mobile navigation experience also exposes the same sign-in/sign-out functionality so authentication is available on small screens.",
+      "files": [
+        "frontend/src/components/SiteHeader.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

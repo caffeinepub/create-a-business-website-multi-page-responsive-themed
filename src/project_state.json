@@ -1,0 +1,108 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Build a website for the user's business",
+  "architectural_notes": [
+    "Authentication (if added) should use Internet Identity (passkey-based), not usernames/passwords."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-business-website-frontend-with-a-clear-navigation-header-and-footer-including-these-pages-sections-with-english-placeholder-copy-that-can-be-easily-replaced-later-home-hero-value-proposition-primary-call-to-action-about-services-and-contact",
+      "title": "Create a responsive business website frontend with a clear navigation header and footer, including these pages/sections with English placeholder copy that can be easily replaced later: Home (hero + value proposition + primary call-to-action), About, Services, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-single-coherent-visual-theme-colors-typography-spacing-and-component-styling-applied-consistently-across-the-site-use-a-distinct-style-appropriate-for-a-professional-business-website-and-avoid-a-blue-purple-dominant-palette",
+      "title": "Add a single, coherent visual theme (colors, typography, spacing, and component styling) applied consistently across the site; use a distinct style appropriate for a professional business website and avoid a blue/purple-dominant palette.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-make-site-content-easy-to-update-by-centralizing-the-business-name-tagline-service-list-contact-details-and-social-links-in-a-single-frontend-configuration-module-and-rendering-the-ui-from-that-data",
+      "title": "Make site content easy to update by centralizing the business name, tagline, service list, contact details, and social links in a single frontend configuration/module and rendering the UI from that data.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-contact-form-ux-client-side-validation-required-fields-email-format-clear-error-messages-loading-state-and-a-success-confirmation-state-after-submission-no-external-email-sms-integrations",
+      "title": "Implement the Contact form UX: client-side validation (required fields, email format), clear error messages, loading state, and a success confirmation state after submission (no external email/SMS integrations).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-basic-seo-and-sharing-defaults-set-page-title-s-and-meta-description-placeholder-values-and-ensure-the-site-has-sensible-heading-structure-one-h1-per-page-primary-view",
+      "title": "Add basic SEO and sharing defaults: set page title(s) and meta description (placeholder values) and ensure the site has sensible heading structure (one H1 per page/primary view).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-required-generated-images-as-static-assets-under-frontend-public-assets-generated-and-use-them-in-the-ui-logo-in-header-footer-hero-image-illustration-in-the-home-hero",
+      "title": "Add the required generated images as static assets under frontend/public/assets/generated and use them in the UI (logo in header/footer; hero image/illustration in the Home hero).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-site-branding-content-to-include-the-word-singh-in-the-business-identity-shown-across-the-site-e-g-business-name-and-or-tagline-using-the-existing-site-configuration-module-as-the-single-source-of-truth",
+      "title": "Update the centralized site branding content to include the word \"Singh\" in the business identity shown across the site (e.g., business name and/or tagline), using the existing site configuration module as the single source of truth.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-login-logout-control-to-the-site-header-using-the-existing-internet-identity-provider-so-visitors-can-sign-in-and-sign-out-without-usernames-passwords",
+      "title": "Add a login/logout control to the site header using the existing Internet Identity provider so visitors can sign in and sign out without usernames/passwords.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-the-mobile-navigation-experience-also-exposes-the-same-sign-in-sign-out-functionality-so-authentication-is-available-on-small-screens",
+      "title": "Ensure the mobile navigation experience also exposes the same sign-in/sign-out functionality so authentication is available on small screens.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a website for the user's business",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Update site content/branding to include \"Singh\" (e.g., business name or text element)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add a login/sign-in feature to the site (Internet Identity, no username/password)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Create a business website (multi-page, responsive, themed)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

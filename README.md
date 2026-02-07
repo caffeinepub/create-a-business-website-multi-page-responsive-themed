@@ -1,2 +1,3 @@
-# create-a-business-website-multi-page-responsive-themed
-Exported from Caffeine project: Create a business website (multi-page, responsive, themed)
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

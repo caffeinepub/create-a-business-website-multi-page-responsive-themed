@@ -1,0 +1,51 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T14:04:04.286Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 2,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-8",
+        "summary": "Add a login/logout control to the site header using the existing Internet Identity provider so visitors can sign in and sign out without usernames/passwords.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/AuthControls.tsx",
+          "frontend/src/components/SiteHeader.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/AuthControls.tsx",
+          "frontend/src/components/SiteHeader.tsx"
+        ]
+      },
+      {
+        "id": "REQ-9",
+        "summary": "Ensure the mobile navigation experience also exposes the same sign-in/sign-out functionality so authentication is available on small screens.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SiteHeader.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/components/SiteHeader.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/src/components/AuthControls.tsx",
+    "frontend/src/components/SiteHeader.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

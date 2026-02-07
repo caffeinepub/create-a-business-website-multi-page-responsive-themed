@@ -1,0 +1,15 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T14:04:04.284Z",
+  "summary": "Implemented reusable Internet Identity auth UI and integrated it into both the desktop header and mobile sheet menu, including loading, error, and sign-in/sign-out states.",
+  "missing_requirements": [],
+  "hallucinated_features": [],
+  "confidence": 0.86,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/src/components/AuthControls.tsx",
+    "frontend/src/components/SiteHeader.tsx",
+    "project_state.json"
+  ]
+}
