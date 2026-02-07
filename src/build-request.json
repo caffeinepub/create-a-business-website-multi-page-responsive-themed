@@ -1,58 +1,53 @@
 {
   "kind": "build_request",
-  "title": "Add Internet Identity login UI",
+  "title": "Update site branding to include “MOBILE STORE AND REPAIRING CENTER”",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-8",
-      "text": "Add a login/logout control to the site header using the existing Internet Identity provider so visitors can sign in and sign out without usernames/passwords.",
+      "id": "REQ-12",
+      "text": "Update the centralized site branding/content configuration so the phrase \"MOBILE STORE AND REPAIRING CENTER\" appears as part of the business identity shown across the site (preferably via the existing tagline field), and ensure the header and footer display the updated branding wherever they render values from the centralized configuration.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-3"
         ],
         "quotes": [
-          "add login"
+          "add MOBILE STORE AND REPAIRING CENTER"
         ]
       },
       "acceptanceCriteria": [
-        "When the user is not authenticated, the header shows a clearly labeled \"Sign in\" button.",
-        "Clicking \"Sign in\" triggers Internet Identity login via the existing `useInternetIdentity()` hook (no automatic login on page load).",
-        "While login is in progress, the sign-in button shows a loading state and is disabled to prevent duplicate attempts.",
-        "When the user is authenticated, the header shows the signed-in state (at minimum a \"Sign out\" button; optionally show a short/abbreviated principal).",
-        "Clicking \"Sign out\" logs the user out via the existing `clear()` function from `useInternetIdentity()` and returns the header to the signed-out state.",
-        "If a login error occurs, an understandable English error message is shown in the UI (inline near the auth control or as a dismissible alert)."
+        "The phrase \"MOBILE STORE AND REPAIRING CENTER\" is present in frontend/src/content/siteConfig.ts as part of the branding content (e.g., in tagline).",
+        "The site header shows the updated branding text on desktop and mobile views (including inside the mobile menu).",
+        "The site footer shows the updated branding text if it renders tagline/branding from the centralized configuration."
       ]
     },
     {
-      "id": "REQ-9",
-      "text": "Ensure the mobile navigation experience also exposes the same sign-in/sign-out functionality so authentication is available on small screens.",
+      "id": "REQ-13",
+      "text": "Update SEO defaults so the static HTML title and meta description include the updated branding (\"IQRA COMMUNICATION\" and \"MOBILE STORE AND REPAIRING CENTER\") and do not conflict with the centralized branding message.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-1"
+          "msg-3"
         ],
         "quotes": [
-          "add login"
+          "add MOBILE STORE AND REPAIRING CENTER"
         ]
       },
       "acceptanceCriteria": [
-        "On mobile (sheet menu open), the user can sign in when signed out and sign out when signed in.",
-        "Auth controls in the mobile menu reflect the same loading and error states as the desktop header auth control.",
-        "Signing in/out updates the UI state correctly without requiring a manual refresh."
+        "frontend/index.html <title> includes \"IQRA COMMUNICATION\" and \"MOBILE STORE AND REPAIRING CENTER\".",
+        "frontend/index.html meta description includes \"MOBILE STORE AND REPAIRING CENTER\".",
+        "No user-facing SEO text references an unrelated business type (e.g., \"Professional Business Solutions\") if it contradicts the new branding."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under `frontend/src/components/ui` (compose existing components instead).",
-    "Do not edit immutable hook paths: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`.",
-    "Authentication must use Internet Identity only (no username/password system).",
-    "Respect the existing single-page app routing and layout structure."
+    "Do not edit files under frontend/src/components/ui (read-only).",
+    "Do not modify immutable frontend hook/provider files listed in SYSTEM_CONTEXT (compose existing hooks/components instead).",
+    "Keep all user-facing text in English."
   ],
   "nonGoals": [
-    "Building a custom username/password database or admin user management.",
-    "Adding role-based authorization or protected pages (unless separately requested).",
-    "Adding any third-party auth providers (Google/Facebook/GitHub/Auth0)."
+    "Do not add new pages, routes, or navigation items unless explicitly requested.",
+    "Do not implement any new backend functionality; backend can remain unchanged."
   ],
   "imageRequirements": {
     "required": [],

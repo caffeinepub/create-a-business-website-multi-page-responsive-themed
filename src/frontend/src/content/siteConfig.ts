@@ -1,6 +1,6 @@
 export const siteConfig = {
-  businessName: 'Elevate Solutions Singh',
-  tagline: 'Empowering Your Business Growth',
+  businessName: 'IQRA COMMUNICATION',
+  tagline: 'MOBILE STORE AND REPAIRING CENTER',
   
   navigation: [
     { label: 'Home', path: '/' },
@@ -43,7 +43,7 @@ export const siteConfig = {
   ],
 
   about: {
-    story: 'Founded with a vision to help businesses thrive in an ever-changing marketplace, Elevate Solutions Singh has grown into a trusted partner for companies seeking to achieve their full potential. Our team combines deep industry expertise with a passion for innovation, delivering solutions that drive real results. We believe in building lasting relationships with our clients, understanding their unique challenges, and crafting strategies that align with their goals. Every project we undertake is an opportunity to make a meaningful impact, and we approach each one with dedication, creativity, and a commitment to excellence.',
+    story: 'Founded with a vision to help businesses thrive in an ever-changing marketplace, IQRA COMMUNICATION has grown into a trusted partner for companies seeking to achieve their full potential. Our team combines deep industry expertise with a passion for innovation, delivering solutions that drive real results. We believe in building lasting relationships with our clients, understanding their unique challenges, and crafting strategies that align with their goals. Every project we undertake is an opportunity to make a meaningful impact, and we approach each one with dedication, creativity, and a commitment to excellence.',
     values: [
       {
         title: 'Integrity',

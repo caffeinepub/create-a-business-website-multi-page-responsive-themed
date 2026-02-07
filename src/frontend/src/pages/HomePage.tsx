@@ -8,7 +8,7 @@ import { usePageMeta } from '@/hooks/usePageMeta';
 export default function HomePage() {
   usePageMeta(
     `${siteConfig.businessName} - ${siteConfig.tagline}`,
-    `${siteConfig.businessName} offers professional services to help your business grow. ${siteConfig.hero.subheadline}`
+    `${siteConfig.businessName} - ${siteConfig.tagline}. ${siteConfig.hero.subheadline}`
   );
 
   return (

@@ -1,13 +1,12 @@
 # Specification
 
 ## Summary
-**Goal:** Add Internet Identity sign-in/sign-out controls to the site header and mobile navigation.
+**Goal:** Update site-wide branding to include the phrase “MOBILE STORE AND REPAIRING CENTER” and align default SEO text with the updated business identity.
 
 **Planned changes:**
-- Add a header authentication control that shows “Sign in” when signed out and “Sign out” (optionally with an abbreviated principal) when signed in.
-- Wire the “Sign in” action to the existing `useInternetIdentity()` hook (user-initiated only) with a disabled/loading state during login.
-- Wire the “Sign out” action to `clear()` from `useInternetIdentity()` and update UI state immediately after sign-out.
-- Display a clear English error message in the UI when login fails.
-- Ensure the mobile navigation/menu exposes the same auth controls with matching loading/error states.
+- Update the centralized branding/content config (frontend/src/content/siteConfig.ts) to include “MOBILE STORE AND REPAIRING CENTER” (preferably in the existing tagline field).
+- Ensure the header (desktop, mobile, and mobile menu) renders the updated branding wherever it reads from the centralized configuration.
+- Ensure the footer renders the updated branding text if it displays tagline/branding from the centralized configuration.
+- Update frontend/index.html SEO defaults so the static HTML title and meta description include “IQRA COMMUNICATION” and “MOBILE STORE AND REPAIRING CENTER”, and remove/avoid any conflicting unrelated business-type SEO text.
 
-**User-visible outcome:** Visitors can sign in and sign out via Internet Identity from both desktop header and mobile menu, with clear loading and error feedback.
+**User-visible outcome:** Visitors see “IQRA COMMUNICATION” with “MOBILE STORE AND REPAIRING CENTER” consistently in the header (including mobile menu) and footer (where applicable), and the browser title/meta description reflect the same branding.

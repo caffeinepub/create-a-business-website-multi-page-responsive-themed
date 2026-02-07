@@ -1,7 +1,7 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-07T14:04:04.286Z",
+  "generatedAt": "2026-02-07T14:17:15.629Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
@@ -11,27 +11,29 @@
     "implemented": 2,
     "items": [
       {
-        "id": "REQ-8",
-        "summary": "Add a login/logout control to the site header using the existing Internet Identity provider so visitors can sign in and sign out without usernames/passwords.",
+        "id": "REQ-12",
+        "summary": "Update the centralized site branding/content configuration so the phrase \"MOBILE STORE AND REPAIRING CENTER\" appears as part of the business identity shown across the site (preferably via the existing tagline field), and ensure the header and footer display the updated branding wherever they render values from the centralized configuration.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/AuthControls.tsx",
-          "frontend/src/components/SiteHeader.tsx"
+          "frontend/src/content/siteConfig.ts",
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/components/SiteFooter.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/AuthControls.tsx",
-          "frontend/src/components/SiteHeader.tsx"
+          "frontend/src/content/siteConfig.ts"
         ]
       },
       {
-        "id": "REQ-9",
-        "summary": "Ensure the mobile navigation experience also exposes the same sign-in/sign-out functionality so authentication is available on small screens.",
+        "id": "REQ-13",
+        "summary": "Update SEO defaults so the static HTML title and meta description include the updated branding (\"IQRA COMMUNICATION\" and \"MOBILE STORE AND REPAIRING CENTER\") and do not conflict with the centralized branding message.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/components/SiteHeader.tsx"
+          "frontend/index.html",
+          "frontend/src/pages/HomePage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/components/SiteHeader.tsx"
+          "frontend/index.html",
+          "frontend/src/pages/HomePage.tsx"
         ]
       }
     ]
@@ -41,8 +43,9 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/src/components/AuthControls.tsx",
-    "frontend/src/components/SiteHeader.tsx",
+    "frontend/index.html",
+    "frontend/src/content/siteConfig.ts",
+    "frontend/src/pages/HomePage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

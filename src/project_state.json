@@ -1,9 +1,11 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 11,
   "summary": "Build a website for the user's business",
   "architectural_notes": [
-    "Authentication (if added) should use Internet Identity (passkey-based), not usernames/passwords."
+    "Authentication (if added) should use Internet Identity (passkey-based), not usernames/passwords.",
+    "Website/business name should be sourced from the centralized site configuration module and updated to \"IQRA COMMUNICATION\" so it propagates across all pages (header/footer/SEO where applicable).",
+    "Add the descriptor/tagline \"MOBILE STORE AND REPAIRING CENTER\" to the centralized site configuration so it can be rendered consistently across pages (e.g., hero, header/footer, SEO where applicable)."
   ],
   "known_issues": [],
   "isFixRequest": false,
@@ -79,6 +81,38 @@
         "REQ-9"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-site-branding-configuration-so-the-website-business-name-displays-as-iqra-communication-across-the-entire-site-header-footer-and-any-page-level-usage-that-reads-from-the-configuration",
+      "title": "Update the centralized site branding configuration so the website/business name displays as \"IQRA COMMUNICATION\" across the entire site (header, footer, and any page-level usage that reads from the configuration).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-seo-defaults-and-page-metadata-so-the-browser-tab-title-and-meta-description-no-longer-reference-the-previous-business-name-and-instead-use-iqra-communication-keeping-text-in-english",
+      "title": "Update SEO defaults and page metadata so the browser tab title and meta description no longer reference the previous business name and instead use \"IQRA COMMUNICATION\" (keeping text in English).",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-site-branding-content-configuration-so-the-phrase-mobile-store-and-repairing-center-appears-as-part-of-the-business-identity-shown-across-the-site-preferably-via-the-existing-tagline-field-and-ensure-the-header-and-footer-display-the-updated-branding-wherever-they-render-values-from-the-centralized-configuration",
+      "title": "Update the centralized site branding/content configuration so the phrase \"MOBILE STORE AND REPAIRING CENTER\" appears as part of the business identity shown across the site (preferably via the existing tagline field), and ensure the header and footer display the updated branding wherever they render values from the centralized configuration.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-seo-defaults-so-the-static-html-title-and-meta-description-include-the-updated-branding-iqra-communication-and-mobile-store-and-repairing-center-and-do-not-conflict-with-the-centralized-branding-message",
+      "title": "Update SEO defaults so the static HTML title and meta description include the updated branding (\"IQRA COMMUNICATION\" and \"MOBILE STORE AND REPAIRING CENTER\") and do not conflict with the centralized branding message.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -97,6 +131,18 @@
     {
       "id": "AR-3",
       "summary": "Add a login/sign-in feature to the site (Internet Identity, no username/password)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Change the website/business name to \"IQRA COMMUNICATION\" (update centralized site configuration so it appears across the site)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add/Update the site's branding text to include \"MOBILE STORE AND REPAIRING CENTER\" (e.g., tagline/descriptor shown across the site via centralized configuration)",
       "reqIds": [],
       "status": "pending"
     }

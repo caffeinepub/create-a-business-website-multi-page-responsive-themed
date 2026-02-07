@@ -1,45 +1,52 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add Internet Identity login/logout UI in header (desktop + mobile)",
+  "title": "Update branding tagline and SEO defaults for IQRA COMMUNICATION",
   "requirements": [
     {
-      "id": "REQ-8",
-      "summary": "Add a desktop header sign-in/sign-out control using the existing useInternetIdentity() hook, including loading and error UI.",
+      "id": "REQ-12",
+      "summary": "Update centralized branding configuration to include “MOBILE STORE AND REPAIRING CENTER” and ensure header/footer show it wherever they use siteConfig branding.",
       "acceptanceCriteria": [
-        "When the user is not authenticated, the header shows a clearly labeled \"Sign in\" button.",
-        "Clicking \"Sign in\" triggers Internet Identity login via the existing `useInternetIdentity()` hook (no automatic login on page load).",
-        "While login is in progress, the sign-in button shows a loading state and is disabled to prevent duplicate attempts.",
-        "When the user is authenticated, the header shows the signed-in state (at minimum a \"Sign out\" button; optionally show a short/abbreviated principal).",
-        "Clicking \"Sign out\" logs the user out via the existing `clear()` function from `useInternetIdentity()` and returns the header to the signed-out state.",
-        "If a login error occurs, an understandable English error message is shown in the UI (inline near the auth control or as a dismissible alert)."
+        "The phrase \"MOBILE STORE AND REPAIRING CENTER\" is present in frontend/src/content/siteConfig.ts as part of the branding content (e.g., in tagline).",
+        "The site header shows the updated branding text on desktop and mobile views (including inside the mobile menu).",
+        "The site footer shows the updated branding text if it renders tagline/branding from the centralized configuration."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/AuthControls.tsx",
-          "operation": "create",
-          "description": "Create a reusable auth control component that uses the existing `useInternetIdentity()` hook to render: signed-out \"Sign in\" button (calls `login()` on click only), signed-in \"Sign out\" button (calls `clear()`), optional abbreviated principal display, a disabled/loading state while `isLoggingIn` is true, and an inline English error message when `isLoginError`/`loginError` are present. Compose existing shadcn/ui primitives (e.g., Button) rather than editing files under `frontend/src/components/ui`. Verify the component's usage instructions before implementing."
+          "path": "frontend/src/content/siteConfig.ts",
+          "operation": "modify",
+          "description": "Update the centralized branding content (preferably siteConfig.tagline) to include the exact phrase “MOBILE STORE AND REPAIRING CENTER”, keeping all user-facing text in English."
         },
         {
           "path": "frontend/src/components/SiteHeader.tsx",
           "operation": "modify",
-          "description": "Wire the new AuthControls into the desktop header area alongside existing navigation, ensuring the control reflects authenticated vs signed-out states, shows loading/disabled behavior during login, and displays any login error message near the control. Keep SPA routing/layout intact and do not change immutable hook files. Compose existing shadcn/ui components already used by SiteHeader (Button/Sheet) and do not edit `frontend/src/components/ui/*`. Verify the component's usage instructions before implementing."
+          "description": "Ensure the header renders siteConfig.tagline in both desktop and mobile header contexts (not only inside the mobile menu) so the updated branding text is visible on mobile views as required."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Verify the footer continues to render tagline/branding from siteConfig and that the updated tagline displays correctly when present (no UI component files under frontend/src/components/ui are modified)."
         }
       ]
     },
     {
-      "id": "REQ-9",
-      "summary": "Expose the same sign-in/sign-out controls inside the mobile navigation sheet with matching loading/error behavior and correct state updates.",
+      "id": "REQ-13",
+      "summary": "Align SEO defaults so static HTML title/meta description include the updated branding and remove conflicting SEO phrasing.",
       "acceptanceCriteria": [
-        "On mobile (sheet menu open), the user can sign in when signed out and sign out when signed in.",
-        "Auth controls in the mobile menu reflect the same loading and error states as the desktop header auth control.",
-        "Signing in/out updates the UI state correctly without requiring a manual refresh."
+        "frontend/index.html <title> includes \"IQRA COMMUNICATION\" and \"MOBILE STORE AND REPAIRING CENTER\".",
+        "frontend/index.html meta description includes \"MOBILE STORE AND REPAIRING CENTER\".",
+        "No user-facing SEO text references an unrelated business type (e.g., \"Professional Business Solutions\") if it contradicts the new branding."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/components/SiteHeader.tsx",
+          "path": "frontend/index.html",
           "operation": "modify",
-          "description": "Add the AuthControls component to the mobile Sheet menu content so authentication is available on small screens, matching the same loading/disabled/error states as desktop and reacting to identity changes without refresh. Ensure the mobile menu continues to use existing shadcn/ui Sheet primitives without editing `frontend/src/components/ui/*`. Verify the component's usage instructions before implementing."
+          "description": "Update the static HTML <title> and meta description to include both “IQRA COMMUNICATION” and “MOBILE STORE AND REPAIRING CENTER”, and remove/replace conflicting phrases such as “Professional Business Solutions”."
+        },
+        {
+          "path": "frontend/src/pages/HomePage.tsx",
+          "operation": "modify",
+          "description": "Update the default home page usePageMeta title/description strings to align with the new branding/tagline (avoid conflicting business-type wording), while still leveraging siteConfig for consistency."
         }
       ]
     }
